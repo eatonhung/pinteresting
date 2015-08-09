@@ -18,9 +18,6 @@ gem 'jquery-rails'
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
-# bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0',          group: :doc
-
 gem 'execjs'
 gem 'bootstrap-sass'
 
@@ -40,16 +37,16 @@ gem 'bootstrap-sass'
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 # Use sqlite3 as the database for Active Record
-group: development, :test do
+group :development, :test do
 	gem 'sqlite3'
 end
 
-group: production do
+group :production do
 	gem 'pg'
 	gem 'rails_12factor'
 end
 
-group: doc do
+group :doc do
 	#bundle exec rake doc: rails generates the API under doc/api.
 	gem 'sdoc', require: false
 end
